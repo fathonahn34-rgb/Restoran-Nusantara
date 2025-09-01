@@ -1,0 +1,123 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+}
+
+/* Header */
+header {
+  background: #e63946;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+/* Navigasi */
+nav {
+  margin-top: 8px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  text-align: center;
+  margin: 25px 0;
+  color: #1d3557;
+}
+
+/* Grid menu */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 20px 40px;
+}
+
+.menu-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-item h3 {
+  margin: 10px 0 5px;
+}
+
+.menu-item p {
+  margin: 0 0 15px;
+  font-weight: bold;
+  color: #e63946;
+}
+
+/* Tombol reservasi */
+.reservasi-btn {
+  display: block;
+  margin: 0 auto 50px;
+  padding: 14px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1d3557;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.reservasi-btn:hover {
+  background-color: #457b9d;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .menu-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .menu-container {
+    grid-template-columns: 1fr;
+  }
+}
